@@ -432,56 +432,77 @@ export default function Page() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-5 bg-light">
-        <div className="container">
-          <div className="section-title" data-aos="fade-up">
-            <h2>Experience & Certifications</h2>
-            <p className="lead">Professional experience and achievements</p>
-          </div>
+     <section id="experience" className="py-5 bg-light">
+  <div className="container">
+    <div className="section-title" data-aos="fade-up">
+      <h2>Experience & Certifications</h2>
+      <p className="lead">Professional experience and achievements</p>
+    </div>
+
+    <div className="row">
+      <div className="col-12 mb-4" data-aos="fade-up">
+        <div className="custom-card">
+          <i className="fas fa-chalkboard-teacher mb-3"></i>
+          <h4>Coding Instructor</h4>
+          <p><strong>Redant Labs Pvt. Ltd</strong> • May 2025 - Present</p>
+          <p><i className="fas fa-map-marker-alt me-2"></i>Chennai, Tamil Nadu</p>
+          <p>
+            As part of our talented team, our Python instructors guide students through core concepts like logic building, algorithm design, sensor integration, and robotic control, using both visual programming and text-based coding. With interactive sessions, project-based tasks, and real-time simulations, we help students transform ideas into working prototypes.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div className="row">
+      <div className="col-lg-6 mb-4" data-aos="fade-right">
+        <div className="custom-card">
+          <i className="fas fa-laptop-code mb-3"></i>
+          <h4>Internship Experience</h4>
+          <p><strong>2-Month Internship</strong> at Soft Tech Ashram</p>
+          <p>Focused on HTML, CSS, and JavaScript development. Gained hands-on experience in web development and user interface design.</p>
+        </div>
+      </div>
+
+      <div className="col-lg-6 mb-4" data-aos="fade-left">
+        <div className="custom-card">
+          <i className="fas fa-certificate mb-3"></i>
+          <h4>Certifications</h4>
+          <ul className="list-unstyled">
+            <li className="mb-2">✓ AWS and DevOps Course - Green Technology</li>
+            <li className="mb-2">✓ Complete UI/UX Course - Novi Tech</li>
+            <li className="mb-2">✓ Senior Grade Typewriting English - First class</li>
+            <li className="mb-2">✓ Department of Technical Education Certification</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    {/* New Row for Coding Instructor */}
+
+
+    {/* Core Competencies */}
+    <div className="row mt-4">
+      <div className="col-12" data-aos="fade-up">
+        <div className="custom-card">
+          <h4 className="mb-3">Core Competencies</h4>
           <div className="row">
-            <div className="col-lg-6 mb-4" data-aos="fade-right">
-              <div className="custom-card">
-                <i className="fas fa-laptop-code mb-3"></i>
-                <h4>Internship Experience</h4>
-                <p><strong>2-Month Internship</strong> at Soft Tech Ashram</p>
-                <p>Focused on HTML, CSS, and JavaScript development. Gained hands-on experience in web development and user interface design.</p>
+            {[
+              { icon: 'fas fa-keyboard', label: 'Typewriting', note: 'Senior Grade' },
+              { icon: 'fas fa-comments', label: 'Communication', note: 'Excellent Skills' },
+              { icon: 'fas fa-lightbulb', label: 'Creative', note: 'Thinking' },
+              { icon: 'fas fa-puzzle-piece', label: 'Problem', note: 'Solving' },
+            ].map((item, i) => (
+              <div className="col-md-3 col-6 text-center mb-3" key={i}>
+                <i className={`${item.icon} fa-2x mb-2 text-primary`}></i>
+                <p className="mb-0"><strong>{item.label}</strong><br />{item.note}</p>
               </div>
-            </div>
-            <div className="col-lg-6 mb-4" data-aos="fade-left">
-              <div className="custom-card">
-                <i className="fas fa-certificate mb-3"></i>
-                <h4>Certifications</h4>
-                <ul className="list-unstyled">
-                  <li className="mb-2">✓ AWS and DevOps Course - Green Technology</li>
-                  <li className="mb-2">✓ Complete UI/UX Course - Novi Tech</li>
-                  <li className="mb-2">✓ Senior Grade Typewriting English - First class</li>
-                  <li className="mb-2">✓ Department of Technical Education Certification</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="row mt-4">
-            <div className="col-12" data-aos="fade-up">
-              <div className="custom-card">
-                <h4 className="mb-3">Core Competencies</h4>
-                <div className="row">
-                  {[
-                    { icon: 'fas fa-keyboard', label: 'Typewriting', note: 'Senior Grade' },
-                    { icon: 'fas fa-comments', label: 'Communication', note: 'Excellent Skills' },
-                    { icon: 'fas fa-lightbulb', label: 'Creative', note: 'Thinking' },
-                    { icon: 'fas fa-puzzle-piece', label: 'Problem', note: 'Solving' },
-                  ].map((item, i) => (
-                    <div className="col-md-3 col-6 text-center mb-3" key={i}>
-                      <i className={`${item.icon} fa-2x mb-2 text-primary`}></i>
-                      <p className="mb-0"><strong>{item.label}</strong><br />{item.note}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Contact Section */}
       <section id="contact" className="py-5">
